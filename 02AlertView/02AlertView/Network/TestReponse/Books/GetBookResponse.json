@@ -1,0 +1,17 @@
+{
+    "status": true,
+    "message": "OK!",
+    "errors": null,
+    "data": [
+        {
+            "id": 3,
+            "title": "sach hay",
+            "description": "sach hay ve van hoc",
+            "user": {
+                "id": 1,
+                "name": "Le Quynh",
+                "email": "codetoanbug@gmail.com"
+            }
+        }
+    ]
+}

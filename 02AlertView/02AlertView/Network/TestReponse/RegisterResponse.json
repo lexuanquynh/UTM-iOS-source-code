@@ -1,0 +1,11 @@
+{
+    "status": true,
+    "message": "OK!",
+    "errors": null,
+    "data": {
+        "id": 4,
+        "name": "Demo UTM student",
+        "email": "demo1@gmail.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNCIsImV4cCI6MTY2NDY3NzM1MiwiaWF0IjoxNjMzMTQxMzUyLCJpc3MiOiJsZXh1YW5xdXluaCJ9.C4YZz9qUt6abAqNazqQ99CrSeg-YJF5bQacP4IeSAYk"
+    }
+}

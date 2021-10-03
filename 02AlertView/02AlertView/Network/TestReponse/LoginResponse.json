@@ -1,0 +1,11 @@
+{
+    "status": true,
+    "message": "OK!",
+    "errors": null,
+    "data": {
+        "id": 2,
+        "name": "hello sinh vien UTL",
+        "email": "quynhbkhn@gmail.com",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMiIsImV4cCI6MTY2NDY3NTQwNCwiaWF0IjoxNjMzMTM5NDA0LCJpc3MiOiJsZXh1YW5xdXluaCJ9.UaKhBm4sq9Lto00cXf4rdfceiP2Tda2GInB39SHfgFw"
+    }
+}
