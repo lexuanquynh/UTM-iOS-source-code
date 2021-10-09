@@ -38,8 +38,8 @@ class MainTabbarViewController: UITabBarController {
           
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.viewControllers = [homeViewController, notificationViewController, settingViewController]
+        let navigationHomeVC = UINavigationController(rootViewController: homeViewController)        
+        self.viewControllers = [navigationHomeVC, notificationViewController, settingViewController]
     }
 
     

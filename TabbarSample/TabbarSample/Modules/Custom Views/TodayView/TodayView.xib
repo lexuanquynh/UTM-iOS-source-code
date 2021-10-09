@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodayView" customModule="TabbarSample" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="hRm-cm-kbY"/>
+                <outlet property="dateLabel" destination="6Fq-gp-M3i" id="ml9-hV-Qj0"/>
+                <outlet property="searchTextFiled" destination="enp-Bg-llv" id="dhk-sI-nqY"/>
+                <outlet property="todayLabel" destination="vsm-zO-F3A" id="W5t-yM-Wty"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="253"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="today" translatesAutoresizingMaskIntoConstraints="NO" id="K4j-yl-Uvg">
+                    <rect key="frame" x="15" y="15" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="QWG-hW-Aio"/>
+                        <constraint firstAttribute="height" constant="60" id="coo-V7-duh"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsm-zO-F3A">
+                    <rect key="frame" x="95" y="15" width="225" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25/9/2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fq-gp-M3i">
+                    <rect key="frame" x="95" y="54" width="225" height="124"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search here.." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="enp-Bg-llv">
+                    <rect key="frame" x="20" y="198" width="300" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="xJU-US-qQ6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6Fq-gp-M3i" secondAttribute="trailing" constant="20" id="D9C-v9-wPq"/>
+                <constraint firstItem="vsm-zO-F3A" firstAttribute="top" secondItem="K4j-yl-Uvg" secondAttribute="top" id="DQh-DH-aNb"/>
+                <constraint firstItem="K4j-yl-Uvg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="DzR-ge-vus"/>
+                <constraint firstItem="vsm-zO-F3A" firstAttribute="leading" secondItem="K4j-yl-Uvg" secondAttribute="trailing" constant="20" id="ODg-XU-9uL"/>
+                <constraint firstItem="enp-Bg-llv" firstAttribute="top" secondItem="6Fq-gp-M3i" secondAttribute="bottom" constant="20" id="Xxq-4b-Geg"/>
+                <constraint firstItem="6Fq-gp-M3i" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="b1E-ki-YqM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="enp-Bg-llv" secondAttribute="bottom" constant="20" id="eO8-1F-Tgn"/>
+                <constraint firstAttribute="trailing" secondItem="vsm-zO-F3A" secondAttribute="trailing" constant="20" id="fTR-sm-grf"/>
+                <constraint firstItem="K4j-yl-Uvg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="kqa-WL-hi4"/>
+                <constraint firstItem="6Fq-gp-M3i" firstAttribute="leading" secondItem="K4j-yl-Uvg" secondAttribute="trailing" constant="20" id="oxc-Eh-ZID"/>
+                <constraint firstItem="enp-Bg-llv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vmF-6s-MuD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="enp-Bg-llv" secondAttribute="trailing" constant="20" id="w3y-Iq-gtB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="42.028985507246382" y="270.87053571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="today" width="63" height="63"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

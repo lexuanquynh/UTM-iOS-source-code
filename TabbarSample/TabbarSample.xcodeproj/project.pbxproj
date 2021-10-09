@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,15 @@
 		22823FD527112CAA0036CC73 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22823FD327112CAA0036CC73 /* SettingViewController.xib */; };
 		22823FD927112D2F0036CC73 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22823FD727112D2F0036CC73 /* HomeViewController.swift */; };
 		22823FDA27112D2F0036CC73 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22823FD827112D2F0036CC73 /* HomeViewController.xib */; };
+		22823FDD271132CA0036CC73 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 22823FDC271132CA0036CC73 /* FSCalendar */; };
+		22823FE0271133E40036CC73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22823FDF271133E40036CC73 /* ViewController.swift */; };
+		22823FE4271136640036CC73 /* DetailLeagueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22823FE2271136640036CC73 /* DetailLeagueViewController.swift */; };
+		22823FE5271136640036CC73 /* DetailLeagueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22823FE3271136640036CC73 /* DetailLeagueViewController.xib */; };
+		22823FE7271139570036CC73 /* View+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22823FE6271139570036CC73 /* View+Ex.swift */; };
+		22823FEB27113A0F0036CC73 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22823FEA27113A0F0036CC73 /* TodayView.swift */; };
+		22823FED27113A1A0036CC73 /* TodayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22823FEC27113A1A0036CC73 /* TodayView.xib */; };
+		22823FF127113EB30036CC73 /* LeagueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22823FEF27113EB30036CC73 /* LeagueTableViewCell.swift */; };
+		22823FF227113EB30036CC73 /* LeagueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22823FF027113EB30036CC73 /* LeagueTableViewCell.xib */; };
 		22843A7B270803B50048305E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22843A7A270803B50048305E /* AppDelegate.swift */; };
 		22843A7D270803B50048305E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22843A7C270803B50048305E /* SceneDelegate.swift */; };
 		22843A82270803B50048305E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22843A80270803B50048305E /* Main.storyboard */; };
@@ -55,6 +64,14 @@
 		22823FD327112CAA0036CC73 /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		22823FD727112D2F0036CC73 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		22823FD827112D2F0036CC73 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		22823FDF271133E40036CC73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		22823FE2271136640036CC73 /* DetailLeagueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLeagueViewController.swift; sourceTree = "<group>"; };
+		22823FE3271136640036CC73 /* DetailLeagueViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailLeagueViewController.xib; sourceTree = "<group>"; };
+		22823FE6271139570036CC73 /* View+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ex.swift"; sourceTree = "<group>"; };
+		22823FEA27113A0F0036CC73 /* TodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayView.swift; sourceTree = "<group>"; };
+		22823FEC27113A1A0036CC73 /* TodayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayView.xib; sourceTree = "<group>"; };
+		22823FEF27113EB30036CC73 /* LeagueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableViewCell.swift; sourceTree = "<group>"; };
+		22823FF027113EB30036CC73 /* LeagueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueTableViewCell.xib; sourceTree = "<group>"; };
 		22843A77270803B50048305E /* TabbarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22843A7A270803B50048305E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22843A7C270803B50048305E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22823FDD271132CA0036CC73 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,10 +126,55 @@
 		22823FD627112D250036CC73 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				22823FEE27113E9A0036CC73 /* Cell */,
 				22823FD727112D2F0036CC73 /* HomeViewController.swift */,
 				22823FD827112D2F0036CC73 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		22823FDE271133D20036CC73 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				22823FDF271133E40036CC73 /* ViewController.swift */,
+				22823FE6271139570036CC73 /* View+Ex.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		22823FE1271135DC0036CC73 /* DetailLeague */ = {
+			isa = PBXGroup;
+			children = (
+				22823FE2271136640036CC73 /* DetailLeagueViewController.swift */,
+				22823FE3271136640036CC73 /* DetailLeagueViewController.xib */,
+			);
+			path = DetailLeague;
+			sourceTree = "<group>";
+		};
+		22823FE8271139F80036CC73 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				22823FE927113A020036CC73 /* TodayView */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		22823FE927113A020036CC73 /* TodayView */ = {
+			isa = PBXGroup;
+			children = (
+				22823FEA27113A0F0036CC73 /* TodayView.swift */,
+				22823FEC27113A1A0036CC73 /* TodayView.xib */,
+			);
+			path = TodayView;
+			sourceTree = "<group>";
+		};
+		22823FEE27113E9A0036CC73 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				22823FEF27113EB30036CC73 /* LeagueTableViewCell.swift */,
+				22823FF027113EB30036CC73 /* LeagueTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		22843A6E270803B50048305E = {
@@ -169,10 +232,13 @@
 		22843AAA270804430048305E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				22823FE8271139F80036CC73 /* Custom Views */,
+				22843AB4270805250048305E /* Tabbar */,
+				22823FE1271135DC0036CC73 /* DetailLeague */,
+				22823FDE271133D20036CC73 /* Common */,
 				22823FD627112D250036CC73 /* Home */,
 				22823FD127112C8F0036CC73 /* Settting */,
 				22843AB7270805F40048305E /* Logout */,
-				22843AB4270805250048305E /* Tabbar */,
 				22843AB1270804C90048305E /* Language */,
 				22843AAE2708047B0048305E /* Notification */,
 				22843AAB270804490048305E /* Search */,
@@ -238,6 +304,9 @@
 			dependencies = (
 			);
 			name = TabbarSample;
+			packageProductDependencies = (
+				22823FDC271132CA0036CC73 /* FSCalendar */,
+			);
 			productName = TabbarSample;
 			productReference = 22843A77270803B50048305E /* TabbarSample.app */;
 			productType = "com.apple.product-type.application";
@@ -309,6 +378,9 @@
 				Base,
 			);
 			mainGroup = 22843A6E270803B50048305E;
+			packageReferences = (
+				22823FDB271132CA0036CC73 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+			);
 			productRefGroup = 22843A78270803B50048305E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -325,9 +397,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22823FED27113A1A0036CC73 /* TodayView.xib in Resources */,
 				22823FD527112CAA0036CC73 /* SettingViewController.xib in Resources */,
 				22823FCC2711270D0036CC73 /* NotificationViewController.xib in Resources */,
+				22823FF227113EB30036CC73 /* LeagueTableViewCell.xib in Resources */,
 				22843A87270803B60048305E /* LaunchScreen.storyboard in Resources */,
+				22823FE5271136640036CC73 /* DetailLeagueViewController.xib in Resources */,
 				22823FD0271127330036CC73 /* SearchViewController.xib in Resources */,
 				22843A84270803B60048305E /* Assets.xcassets in Resources */,
 				22823FC8271126DF0036CC73 /* LanguageViewController.xib in Resources */,
@@ -358,12 +433,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				22823FCF271127330036CC73 /* SearchViewController.swift in Sources */,
+				22823FE7271139570036CC73 /* View+Ex.swift in Sources */,
 				22843A7B270803B50048305E /* AppDelegate.swift in Sources */,
 				22823FCB2711270D0036CC73 /* NotificationViewController.swift in Sources */,
+				22823FF127113EB30036CC73 /* LeagueTableViewCell.swift in Sources */,
+				22823FE0271133E40036CC73 /* ViewController.swift in Sources */,
 				22823FD927112D2F0036CC73 /* HomeViewController.swift in Sources */,
 				22823FC7271126DF0036CC73 /* LanguageViewController.swift in Sources */,
 				22843AB6270805400048305E /* MainTabbarViewController.swift in Sources */,
 				22823FD427112CAA0036CC73 /* SettingViewController.swift in Sources */,
+				22823FE4271136640036CC73 /* DetailLeagueViewController.swift in Sources */,
+				22823FEB27113A0F0036CC73 /* TodayView.swift in Sources */,
 				22843A7D270803B50048305E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +771,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		22823FDB271132CA0036CC73 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		22823FDC271132CA0036CC73 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22823FDB271132CA0036CC73 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22843A6F270803B50048305E /* Project object */;
 }
