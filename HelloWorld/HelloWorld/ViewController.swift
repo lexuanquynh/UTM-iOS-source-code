@@ -30,11 +30,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var ketQuaLabel: UILabel!
     
     var ketqua: Float = 0.0
-    var tempNum: Float = 0.0
+    var priviousNumber: Float = 0.0
+    
+    enum PhepTinh {
+        case cong
+        case tru
+        case nhan
+        case chia
+        case tinhtoan
+        case none
+    }
+    
+    var currentPhepTinh: PhepTinh = .none
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+              
     }
 
     override func viewDidLayoutSubviews() {
@@ -64,37 +75,70 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onNumberTouched(_ sender: UIButton) {
-        print("tag = \(sender.tag)")
+        // Chuyen kieu int sang kieu string
+        if currentPhepTinh == .none {
+            let ketqua = getNewValue(text: self.ketQuaLabel.text, temp: sender.tag)
+            self.ketQuaLabel.text = "\(ketqua)"
+        } else { // da thuc hien phep tinh
+            if  currentPhepTinh == .tinhtoan {
+                // Truong hop khi vua xu ly xong phep toan
+                self.ketQuaLabel.text = "0"
+                currentPhepTinh = .none
+            }
+            if self.priviousNumber == 0 {
+                self.priviousNumber = Float(self.ketQuaLabel.text ?? "") ?? 0
+                self.ketQuaLabel.text = "0"
+            }
+            let ketqua = getNewValue(text: self.ketQuaLabel.text, temp: sender.tag)
+            self.ketQuaLabel.text = "\(ketqua)"
+        }
+        
     }
     
+    /// Hàm lấy giá trị của phép tính khi bấm vào button số
+    /// - Parameters:
+    ///   - text: text trên ô kết quả
+    ///   - temp: temp giá trị tag của button bấm vào
+    /// - Returns: hiện tại của text
+    func getNewValue(text: String?, temp: Int) -> Float {
+        let currentValue = Float(text ?? "") ?? 0
+        return Float(Int(currentValue) * 10 + temp)
+    }
     
     @IBAction func onDotTouched(_ sender: UIButton) {
         print("dot")
     }
     
     @IBAction func onChiaTouched(_ sender: UIButton) {
-        print("chia")
+        currentPhepTinh = .chia
+        
     }
  
     @IBAction func onNhanTouched(_ sender: UIButton) {
-        print("Nhan")
+        currentPhepTinh = .nhan
     }
     
     @IBAction func onTruTouched(_ sender: UIButton) {
-        print("Tru")
+        currentPhepTinh = .tru
     }
     
     @IBAction func onCongTouched(_ sender: UIButton) {
-        print("cong")
+        currentPhepTinh = .cong
     }
     
     @IBAction func onBangTouched(_ sender: UIButton) {
-        print("bang")
+        currentPhepTinh = .tinhtoan
+        // Xu ly tinh toan
+        let currentNumber = Float(self.ketQuaLabel.text ?? "") ?? 0
+        let result = self.priviousNumber * currentNumber
+        self.ketQuaLabel.text = "\(result)"
+        // reset ket qua
+        self.priviousNumber = 0.0
     }
     
     
     @IBAction func onACTouched(_ sender: UIButton) {
-        print("AC")
+        self.ketQuaLabel.text = "0.0"
     }
     
     @IBAction func onAmDuongTouched(_ sender: UIButton) {
