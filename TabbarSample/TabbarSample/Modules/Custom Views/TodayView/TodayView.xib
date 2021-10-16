@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,13 +42,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search here.." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="enp-Bg-llv">
-                    <rect key="frame" x="20" y="198" width="300" height="35"/>
+                    <rect key="frame" x="20" y="198" width="265" height="35"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="35" id="xJU-US-qQ6"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P19-h9-xYz">
+                    <rect key="frame" x="290" y="195.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0he-zi-l9I"/>
+                        <constraint firstAttribute="width" constant="40" id="egK-F8-se0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title=" ">
+                        <backgroundConfiguration key="background" image="search"/>
+                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="onSearchAction:" destination="-1" eventType="touchUpInside" id="Qey-ex-bKv"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,7 +71,10 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6Fq-gp-M3i" secondAttribute="trailing" constant="20" id="D9C-v9-wPq"/>
                 <constraint firstItem="vsm-zO-F3A" firstAttribute="top" secondItem="K4j-yl-Uvg" secondAttribute="top" id="DQh-DH-aNb"/>
                 <constraint firstItem="K4j-yl-Uvg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="DzR-ge-vus"/>
+                <constraint firstItem="P19-h9-xYz" firstAttribute="leading" secondItem="enp-Bg-llv" secondAttribute="trailing" constant="5" id="E9X-jr-mvt"/>
                 <constraint firstItem="vsm-zO-F3A" firstAttribute="leading" secondItem="K4j-yl-Uvg" secondAttribute="trailing" constant="20" id="ODg-XU-9uL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P19-h9-xYz" secondAttribute="trailing" constant="10" id="Tbq-WR-qDN"/>
+                <constraint firstItem="P19-h9-xYz" firstAttribute="centerY" secondItem="enp-Bg-llv" secondAttribute="centerY" id="W2a-Da-ci2"/>
                 <constraint firstItem="enp-Bg-llv" firstAttribute="top" secondItem="6Fq-gp-M3i" secondAttribute="bottom" constant="20" id="Xxq-4b-Geg"/>
                 <constraint firstItem="6Fq-gp-M3i" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="b1E-ki-YqM"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="enp-Bg-llv" secondAttribute="bottom" constant="20" id="eO8-1F-Tgn"/>
@@ -64,13 +82,13 @@
                 <constraint firstItem="K4j-yl-Uvg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="kqa-WL-hi4"/>
                 <constraint firstItem="6Fq-gp-M3i" firstAttribute="leading" secondItem="K4j-yl-Uvg" secondAttribute="trailing" constant="20" id="oxc-Eh-ZID"/>
                 <constraint firstItem="enp-Bg-llv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vmF-6s-MuD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="enp-Bg-llv" secondAttribute="trailing" constant="20" id="w3y-Iq-gtB"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="42.028985507246382" y="270.87053571428572"/>
         </view>
     </objects>
     <resources>
+        <image name="search" width="250" height="250"/>
         <image name="today" width="63" height="63"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

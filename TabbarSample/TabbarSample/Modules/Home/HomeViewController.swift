@@ -9,11 +9,13 @@ import UIKit
 
 class HomeViewController: ViewController {
     @IBOutlet weak var leagueTableView: UITableView!
+    @IBOutlet weak var todayView: TodayView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.initTableView()            
+        self.initTableView()
+        self.todayView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +32,13 @@ class HomeViewController: ViewController {
     }
 }
 
+extension HomeViewController: TodayViewDelegate {
+    func didSearch(text: String) {
+        print("text = \(text)")
+    }
+    
+    
+}
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
