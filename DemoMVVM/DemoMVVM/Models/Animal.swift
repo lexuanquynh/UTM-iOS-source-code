@@ -13,8 +13,3 @@ struct Animal {
     let image: String
     let color: UIColor = UIColor.random()
 }
-
-/*
- struct - kieu gia tri
- class - con tham chieu
- */

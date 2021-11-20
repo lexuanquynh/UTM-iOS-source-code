@@ -36,8 +36,6 @@ extension HomeViewController: TodayViewDelegate {
     func didSearch(text: String) {
         print("text = \(text)")
     }
-    
-    
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {

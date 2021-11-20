@@ -35,23 +35,12 @@ class TodayView: UIView {
         addSubview(containerView)
         containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-
-//        let imageView = UIImageView(frame: CGRect(x: 8.0, y: 8.0, width: 24.0, height: 24.0))
-//        let image = UIImage(named: "search")
-//        imageView.image = image
-//        imageView.contentMode = .scaleAspectFit
-//        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 40))
-//        view.addSubview(imageView)
-//        searchTextFiled.rightViewMode = UITextField.ViewMode.always
-//        searchTextFiled.rightView = view
     }
     
     @IBAction func onSearchAction(_ sender: UIButton) {
         if let text = searchTextFiled.text {
             self.delegate?.didSearch(text: text)
         }
-        
     }
-    
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEy-fH-4eg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Animal View Controller-->
+        <!--Animals-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AnimalViewController" customModule="DemoMVVM" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9og-x0-kuo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -30,13 +30,80 @@
                             <constraint firstItem="9og-x0-kuo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v2V-dG-MHG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Animals" id="ecI-8r-8MI"/>
                     <connections>
                         <outlet property="animalTableView" destination="9og-x0-kuo" id="viv-1F-V4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="94"/>
+            <point key="canvasLocation" x="1626.0869565217392" y="132.58928571428572"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="VqH-5O-VWi">
+            <objects>
+                <viewController id="BRe-n2-0lQ" customClass="MainViewController" customModule="DemoMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nao-0t-riR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnc-XP-An8">
+                                <rect key="frame" x="107" y="138" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="fbs-g6-IUT"/>
+                                    <constraint firstAttribute="height" constant="35" id="yEM-wp-xU1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show animals"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xfG-Ji-oR3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQf-xJ-fto">
+                                <rect key="frame" x="107" y="203" width="200" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="tnN-ng-hZT"/>
+                                    <constraint firstAttribute="width" constant="200" id="uBK-wZ-bQ2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show github repositories"/>
+                                <connections>
+                                    <action selector="onShowGithubTouched:" destination="BRe-n2-0lQ" eventType="touchUpInside" id="sFC-be-cX7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N7r-Vu-rZF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GQf-xJ-fto" firstAttribute="centerX" secondItem="N7r-Vu-rZF" secondAttribute="centerX" id="8b4-dt-Fj8"/>
+                            <constraint firstItem="GQf-xJ-fto" firstAttribute="top" secondItem="wnc-XP-An8" secondAttribute="bottom" constant="30" id="M57-gH-kmH"/>
+                            <constraint firstItem="wnc-XP-An8" firstAttribute="centerX" secondItem="N7r-Vu-rZF" secondAttribute="centerX" id="fs3-9z-1PQ"/>
+                            <constraint firstItem="wnc-XP-An8" firstAttribute="top" secondItem="N7r-Vu-rZF" secondAttribute="top" constant="50" id="pA3-fV-APl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="CHT-ML-VM2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-wN-kov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="163.39285714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mrr-pw-7vF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mEy-fH-4eg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QYc-gS-7jR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BRe-n2-0lQ" kind="relationship" relationship="rootViewController" id="aq1-S2-rpx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="95I-pF-SFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59.420289855072468" y="163.39285714285714"/>
         </scene>
     </scenes>
     <resources>

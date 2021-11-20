@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="TabbarSample" customModuleProvider="target">
+            <connections>
+                <outlet property="chatTableView" destination="3cj-3F-Y0c" id="EyV-42-hk6"/>
+                <outlet property="contetnTextField" destination="rcA-WM-1Me" id="9Qt-rJ-9t8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-3F-Y0c">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type something here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcA-WM-1Me">
+                    <rect key="frame" x="20" y="468" width="269" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="qzn-0y-URP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIv-UK-xIE">
+                    <rect key="frame" x="309" y="470" width="90" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="I0u-0t-hEL"/>
+                        <constraint firstAttribute="width" constant="90" id="Zht-NC-ej0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Send"/>
+                    <connections>
+                        <action selector="sendButtonTouched:" destination="-1" eventType="touchUpInside" id="IIQ-EW-V9w"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3cj-3F-Y0c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7eB-Yq-a9O"/>
+                <constraint firstItem="3cj-3F-Y0c" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CO0-ml-XEI"/>
+                <constraint firstItem="3cj-3F-Y0c" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="VHs-Sp-R8K"/>
+                <constraint firstItem="rcA-WM-1Me" firstAttribute="top" secondItem="3cj-3F-Y0c" secondAttribute="bottom" constant="20" id="Wh9-ox-09g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3cj-3F-Y0c" secondAttribute="trailing" id="chX-2k-IsN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZIv-UK-xIE" secondAttribute="trailing" constant="15" id="ngN-23-r3p"/>
+                <constraint firstItem="ZIv-UK-xIE" firstAttribute="centerY" secondItem="rcA-WM-1Me" secondAttribute="centerY" id="q7d-ou-6af"/>
+                <constraint firstItem="rcA-WM-1Me" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qak-rq-zss"/>
+                <constraint firstItem="ZIv-UK-xIE" firstAttribute="leading" secondItem="rcA-WM-1Me" secondAttribute="trailing" constant="20" id="tp9-He-VA2"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

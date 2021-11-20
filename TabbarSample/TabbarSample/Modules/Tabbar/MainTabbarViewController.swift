@@ -35,11 +35,19 @@ class MainTabbarViewController: UITabBarController {
         homeViewController.tabBarItem.title = "Home"
         return homeViewController
     }()
-          
+    
+    private lazy var chatViewController: ChatViewController = {
+        chatViewController = ChatViewController(nibName: "ChatViewController", bundle: nil)
+        chatViewController.tabBarItem.image  = UIImage(systemName: "house")
+        chatViewController.tabBarItem.title = "Chat"
+        return chatViewController
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let navigationHomeVC = UINavigationController(rootViewController: homeViewController)        
-        self.viewControllers = [navigationHomeVC, notificationViewController, settingViewController]
+        let navigationHomeVC = UINavigationController(rootViewController: homeViewController)
+        let naviSettingVC = UINavigationController(rootViewController: settingViewController)
+        self.viewControllers = [navigationHomeVC, chatViewController, notificationViewController, naviSettingVC]
     }
 
     
