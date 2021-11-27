@@ -20,6 +20,11 @@ class ChatViewController: UIViewController {
         bindViewModel()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getData()
+    }
+    
     private func initTableView() {
         chatTableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
         chatTableView.dataSource = self
@@ -33,7 +38,7 @@ class ChatViewController: UIViewController {
         viewModel.needReloadTableView = { [weak self] in
             self?.chatTableView.reloadData()
         }
-        viewModel.getData()
+        
     }
     
     @IBAction func sendButtonTouched(_ sender: Any) {
