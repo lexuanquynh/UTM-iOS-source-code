@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2200B3052751B48D008B0D55 /* Enscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B3042751B48D008B0D55 /* Enscript.swift */; };
+		2200B3092751B5B0008B0D55 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B3072751B5B0008B0D55 /* ChatTableViewCell.swift */; };
+		2200B30A2751B5B0008B0D55 /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2200B3082751B5B0008B0D55 /* ChatTableViewCell.xib */; };
+		2200B30C2751B85B008B0D55 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B30B2751B85B008B0D55 /* ChatModel.swift */; };
+		2200B30E2751BFC2008B0D55 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200B30D2751BFC2008B0D55 /* RandomColor.swift */; };
 		221F723A27487A0600D899BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F723827487A0600D899BE /* LoginViewController.swift */; };
 		221F723B27487A0600D899BE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221F723927487A0600D899BE /* LoginViewController.xib */; };
 		221F723F27487A1A00D899BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221F723D27487A1A00D899BE /* RegisterViewController.swift */; };
@@ -73,6 +78,11 @@
 
 /* Begin PBXFileReference section */
 		0276DD5CFCC64BC1E9D01AB2 /* Pods-TabbarSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbarSampleTests.debug.xcconfig"; path = "Target Support Files/Pods-TabbarSampleTests/Pods-TabbarSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2200B3042751B48D008B0D55 /* Enscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enscript.swift; sourceTree = "<group>"; };
+		2200B3072751B5B0008B0D55 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		2200B3082751B5B0008B0D55 /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		2200B30B2751B85B008B0D55 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		2200B30D2751BFC2008B0D55 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		221F723827487A0600D899BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		221F723927487A0600D899BE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		221F723D27487A1A00D899BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +169,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2200B3062751B5A1008B0D55 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2200B3072751B5B0008B0D55 /* ChatTableViewCell.swift */,
+				2200B3082751B5B0008B0D55 /* ChatTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		221F7237274879F800D899BE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,9 +217,13 @@
 		226C7AD8274890D300A8956E /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				2200B3062751B5A1008B0D55 /* Cell */,
 				226C7AD9274890E200A8956E /* ChatViewController.swift */,
 				226C7ADA274890E200A8956E /* ChatViewController.xib */,
 				226C7ADD274891BE00A8956E /* ChatViewModel.swift */,
+				2200B3042751B48D008B0D55 /* Enscript.swift */,
+				2200B30B2751B85B008B0D55 /* ChatModel.swift */,
+				2200B30D2751BFC2008B0D55 /* RandomColor.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -539,6 +562,7 @@
 				226C7AE02748960500A8956E /* GoogleService-Info.plist in Resources */,
 				22843A84270803B60048305E /* Assets.xcassets in Resources */,
 				221F724027487A1A00D899BE /* RegisterViewController.xib in Resources */,
+				2200B30A2751B5B0008B0D55 /* ChatTableViewCell.xib in Resources */,
 				221F723B27487A0600D899BE /* LoginViewController.xib in Resources */,
 				22823FC8271126DF0036CC73 /* LanguageViewController.xib in Resources */,
 				22843A82270803B50048305E /* Main.storyboard in Resources */,
@@ -678,15 +702,19 @@
 				22823FF127113EB30036CC73 /* LeagueTableViewCell.swift in Sources */,
 				221F724227487A9800D899BE /* SettingViewModel.swift in Sources */,
 				22823FE0271133E40036CC73 /* ViewController.swift in Sources */,
+				2200B30C2751B85B008B0D55 /* ChatModel.swift in Sources */,
 				221F724927487C6900D899BE /* SettingModel.swift in Sources */,
 				22823FD927112D2F0036CC73 /* HomeViewController.swift in Sources */,
 				226C7ADE274891BE00A8956E /* ChatViewModel.swift in Sources */,
+				2200B3092751B5B0008B0D55 /* ChatTableViewCell.swift in Sources */,
 				22823FC7271126DF0036CC73 /* LanguageViewController.swift in Sources */,
 				22843AB6270805400048305E /* MainTabbarViewController.swift in Sources */,
 				22AE9738273F5D1F003E0597 /* HomeViewModel.swift in Sources */,
+				2200B3052751B48D008B0D55 /* Enscript.swift in Sources */,
 				221F724627487AE700D899BE /* SettingTableViewCell.swift in Sources */,
 				221F723F27487A1A00D899BE /* RegisterViewController.swift in Sources */,
 				221F724B2748826900D899BE /* Utils.swift in Sources */,
+				2200B30E2751BFC2008B0D55 /* RandomColor.swift in Sources */,
 				226C7ADB274890E200A8956E /* ChatViewController.swift in Sources */,
 				221F7250274885FD00D899BE /* AuthenHelper.swift in Sources */,
 				22823FD427112CAA0036CC73 /* SettingViewController.swift in Sources */,
